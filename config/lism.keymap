@@ -94,6 +94,22 @@
             bindings = <&mo 2>;
             key-positions = <2 1>;
         };
+
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <25 26>;
+            layers = <0 1>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>, <&kp>;
+
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
