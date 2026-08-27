@@ -468,6 +468,10 @@ path.combo { stroke: #7f7f7f; }
 <a href="#numbers">
 <text x="112" y="28" class="combo tap layer-activator">numbers</text>
 </a></g>
+<g class="combo combopos-5">
+<rect rx="6" ry="6" x="490" y="127" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="495" y="131" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+</g>
 </g>
 </g>
 <g transform="translate(30, 308)" class="layer-wDefault">
@@ -689,6 +693,10 @@ path.combo { stroke: #7f7f7f; }
 <a href="#numbers">
 <text x="112" y="28" class="combo tap layer-activator">numbers</text>
 </a></g>
+<g class="combo combopos-5">
+<rect rx="6" ry="6" x="490" y="127" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="495" y="131" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+</g>
 </g>
 </g>
 <g transform="translate(30, 616)" class="layer-numbers">

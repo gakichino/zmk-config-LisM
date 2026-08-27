@@ -363,3 +363,6 @@ combos:
   k: $$mdi:mouse-right-click-outline$$
 - p: [2, 1]
   k: numbers
+- p: [25, 26]
+  k: $$mdi:keyboard-esc$$
+  l: [mDefault, wDefault]
