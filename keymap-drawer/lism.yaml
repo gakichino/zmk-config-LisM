@@ -405,13 +405,6 @@ combos:
 - p: [34, 35]
   k: system_mac
   l: [mDefault]
-- p: [13, 23]
-  k: $$mdi:mouse-left-click-outline$$
-  l: [mDefault, wDefault]
-- p: [12, 22]
-  k: $$mdi:mouse-right-click-outline$$
-- p: [2, 1]
-  k: numbers
 - p: [25, 26]
   k: $$mdi:keyboard-esc$$
   l: [mDefault, wDefault]
