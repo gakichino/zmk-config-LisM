@@ -1,12 +1,12 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 200
 
 #include <dt-bindings/zmk/mouse.h>
+#include <mouse-gesture.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <mouse-gesture.dtsi>
 
 &mt {
     quick-tap-ms = <200>;
@@ -112,6 +112,8 @@
 &trans  &kp LG(TAB)  &kp LG(TAB)  &trans  &trans  &mt3 LEFT_CONTROL TAB    &mt2 RIGHT_GUI BACKSPACE  &trans  &trans  &kp LC(LA(TAB))  &kp LC(LA(TAB))  &trans
                      &trans       &trans  &trans                                                     &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&encoder_msc SCRL_UP SCRL_DOWN>;
         };
 
         numbers_arrows {
@@ -136,6 +138,8 @@
 &trans        &trans             &trans           &none     &trans     &trans    &trans  &trans     &trans     &trans                &trans                 &trans
                                  &trans           &trans    &trans                       &trans     &trans     &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
         };
 
         fnc_navi {
@@ -174,11 +178,11 @@
         auto_mouse {
             display-name = "mouse";
             bindings = <
-&trans  &trans    &mo 2     &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &mo 2     &trans    &trans                    &trans  &trans          &trans  &trans  &trans
 &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mouse_gesture  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans    &trans    &trans                    &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans                    &trans  &trans          &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans
+                  &trans    &trans    &trans                    &trans  &trans          &trans
             >;
         };
     };
