@@ -1,3 +1,5 @@
+#include <mouse-gesture.dtsi>
+
 / {
     chosen {
         zmk,kscan = &kscan1;
@@ -16,6 +18,64 @@
     };
 };
 
+// ジェスチャー定義（&mouse_gesture を押している間だけ認識される）
+&zip_mouse_gesture {
+    stroke-size = <250>;
+    enable-eager-mode;
+    suppress-movement;
+
+    desktop_left {
+        pattern = <GESTURE_LEFT>;
+        bindings = <&kp LC(LEFT)>;
+    };
+
+    desktop_right {
+        pattern = <GESTURE_RIGHT>;
+        bindings = <&kp LC(RIGHT)>;
+    };
+
+    mission_control {
+        pattern = <GESTURE_UP>;
+        bindings = <&kp LC(UP)>;
+    };
+
+    app_expose {
+        pattern = <GESTURE_DOWN>;
+        bindings = <&kp LC(DOWN)>;
+    };
+};
+
+// Windows 用のジェスチャー（レイヤー1がアクティブなときに使う）
+/ {
+    zip_mouse_gesture_win: zip_mouse_gesture_win {
+        compatible = "zmk,input-processor-mouse-gesture";
+        #input-processor-cells = <0>;
+        stroke-size = <250>;
+        enable-eager-mode;
+        suppress-movement;
+
+        desktop_left {
+            pattern = <GESTURE_LEFT>;
+            bindings = <&kp LC(LG(LEFT))>;
+        };
+
+        desktop_right {
+            pattern = <GESTURE_RIGHT>;
+            bindings = <&kp LC(LG(RIGHT))>;
+        };
+
+        task_view {
+            pattern = <GESTURE_UP>;
+            bindings = <&kp LG(TAB)>;
+        };
+
+        app_expose_like {
+            pattern = <GESTURE_DOWN>;
+            bindings = <&kp LC(LA(TAB))>;
+        };
+    };
+};
+
 // excluded-positions 以外のキーを押すと auto mouse layer が解除される
 // positions は lism.dtsi の physical layout と同じ順番（0始まり）
 &zip_temp_layer {
@@ -24,13 +84,23 @@
         11 // S: MB3
         12 // D: MB2
         13 // F: MB1
+        16 // J: ジェスチャー起動(&mouse_gesture)
     >;
 };
 
 // ペリフェラル（split経由）のリスナーを有効化
 &peripheral_listener {
     status = "okay";
-    input-processors = <&zip_temp_layer 7 5000>;
+    input-processors =
+        <&zip_temp_layer 7 5000>,
+        <&zip_mouse_gesture>;
+
+    win_gesture {
+        layers = <1>;
+        input-processors =
+            <&zip_temp_layer 7 5000>,
+            <&zip_mouse_gesture_win>;
+    };
 };
 
 // セントラルのリスナーを有効化し、deviceを紐付け
@@ -39,13 +109,24 @@
     device = <&trackball_central>;
     input-processors =
         <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 7 5000>;
+        <&zip_temp_layer 7 5000>,
+        <&zip_mouse_gesture>;
 
+    // オーバーライドは宣言順に評価され、最初にマッチした1つだけが適用される。
+    // レイヤー1（Windows）は常時アクティブなので、スクロールを先に置く必要がある。
     scroller {
         layers = <2>;
         input-processors =
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_scroll_scaler 1 16>;
+    };
+
+    win_gesture {
+        layers = <1>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_temp_layer 7 5000>,
+            <&zip_mouse_gesture_win>;
     };
 };
