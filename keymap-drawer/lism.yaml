@@ -360,7 +360,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mouse_gesture'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
