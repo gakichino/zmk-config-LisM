@@ -182,11 +182,11 @@
         auto_mouse {
             display-name = "mouse";
             bindings = <
-&trans  &trans    &mo 2     &trans    &trans                    &trans  &trans          &trans  &trans  &trans
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mouse_gesture  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans                    &trans  &trans          &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans          &trans  &trans  &trans
-                  &trans    &trans    &trans                    &trans  &trans          &trans
+&trans  &trans    &mo 2     &trans    &trans                    &mouse_gesture  &trans  &trans  &trans  &trans
+&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                  &trans    &trans    &trans                    &trans  &trans  &trans
             >;
         };
     };
