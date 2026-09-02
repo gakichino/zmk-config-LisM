@@ -162,6 +162,8 @@
 &kp LA(LG(C_POWER))  &trans        &trans                &trans                &trans            &trans    &trans  &trans  &trans  &trans  &trans       &trans
                                    &trans                &trans                &trans                              &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LG(EQUAL) LG(MINUS)>;
         };
 
         win_bt_shortcuts {
@@ -173,6 +175,8 @@
 &kp LG(L)     &trans        &trans               &trans         &trans         &trans    &trans  &trans  &trans  &trans  &trans       &trans
                             &trans               &trans         &trans                           &trans  &trans  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp LC(EQUAL) LC(MINUS)>;
         };
 
         auto_mouse {
