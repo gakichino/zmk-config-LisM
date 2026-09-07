@@ -156,11 +156,11 @@
         mac_bt_shortcuts {
             display-name = "system_mac";
             bindings = <
-&sys_reset           &bootloader   &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                      &none   &to 0   &to 1   &bootloader  &sys_reset
-&none                &bt BT_SEL 4  &out OUT_TOG          &none                 &kp LEFT_CONTROL                    &none   &none   &none   &bt BT_CLR   &bt BT_CLR_ALL
-&bt BT_SEL 0         &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3          &none                               &none   &none   &none   &none        &none
-&kp LA(LG(C_POWER))  &trans        &trans                &trans                &trans            &trans    &trans  &trans  &trans  &trans  &trans       &trans
-                                   &trans                &trans                &trans                              &trans  &trans  &trans
+&sys_reset           &bootloader  &kp LS(LG(NUMBER_3))  &kp LS(LG(NUMBER_4))  &kp LS(LG(N5))                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none                &none        &out OUT_TOG          &none                 &kp LEFT_CONTROL                    &none         &to 0         &to 1         &bt BT_CLR    &bt BT_CLR_ALL
+&none                &none        &none                 &none                 &none                               &none         &none         &none         &none         &none
+&kp LA(LG(C_POWER))  &trans       &trans                &trans                &trans            &trans    &trans  &trans        &trans        &trans        &trans        &trans
+                                  &trans                &trans                &trans                              &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LG(EQUAL) LG(MINUS)>;
@@ -169,11 +169,11 @@
         win_bt_shortcuts {
             display-name = "system_win";
             bindings = <
-&sys_reset    &bootloader   &kp LG(PRINTSCREEN)  &kp LG(LS(S))  &kp LG(LS(S))                    &none   &to 0   &to 1   &bootloader  &sys_reset
-&none         &bt BT_SEL 4  &out OUT_TOG         &none          &kp LG(H)                        &none   &none   &none   &bt BT_CLR   &bt BT_CLR_ALL
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2         &bt BT_SEL 3   &none                            &none   &none   &none   &none        &none
-&kp LG(L)     &trans        &trans               &trans         &trans         &trans    &trans  &trans  &trans  &trans  &trans       &trans
-                            &trans               &trans         &trans                           &trans  &trans  &trans
+&sys_reset  &bootloader  &kp LG(PRINTSCREEN)  &kp LG(LS(S))  &kp LG(LS(S))                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none       &none        &out OUT_TOG         &none          &kp LG(H)                        &none         &to 0         &to 1         &bt BT_CLR    &bt BT_CLR_ALL
+&none       &none        &none                &none          &none                            &none         &none         &none         &none         &none
+&kp LG(L)   &trans       &trans               &trans         &trans         &trans    &trans  &trans        &trans        &trans        &trans        &trans
+                         &trans               &trans         &trans                           &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(EQUAL) LC(MINUS)>;
@@ -183,10 +183,10 @@
             display-name = "mouse";
             bindings = <
 &trans  &trans    &mo 2     &trans    &trans                    &mouse_gesture  &trans  &trans  &trans  &trans
-&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans    &trans    &trans                    &trans  &trans  &trans
+&trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans          &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans                    &trans          &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans  &trans    &trans  &trans          &trans  &trans  &trans  &trans
+                  &trans    &trans    &trans                    &trans          &trans  &trans
             >;
         };
     };
