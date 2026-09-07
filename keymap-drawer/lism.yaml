@@ -251,25 +251,25 @@ layers:
   - Sft+Gui+3
   - Sft+Gui+4
   - Sft+Gui+5
-  - ''
-  - {t: mDefault, h: toggle}
-  - {t: wDefault, h: toggle}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - ''
-  - $$mdi:apple-keyboard-control$$
-  - ''
-  - ''
-  - ''
-  - BT CLR
-  - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - ''
+  - ''
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - ''
+  - $$mdi:apple-keyboard-control$$
+  - ''
+  - {t: mDefault, h: toggle}
+  - {t: wDefault, h: toggle}
+  - BT CLR
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -300,25 +300,25 @@ layers:
   - Gui+PRINTSCREEN
   - Gui+Sft+S
   - Gui+Sft+S
-  - ''
-  - {t: mDefault, h: toggle}
-  - {t: wDefault, h: toggle}
-  - $$mdi:progress-download$$
-  - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - ''
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
-  - ''
-  - Gui+H
-  - ''
-  - ''
-  - ''
-  - BT CLR
-  - BT CLR ALL
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - ''
+  - ''
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - ''
+  - Gui+H
+  - ''
+  - {t: mDefault, h: toggle}
+  - {t: wDefault, h: toggle}
+  - BT CLR
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
