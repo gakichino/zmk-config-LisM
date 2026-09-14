@@ -17,6 +17,49 @@
 &lt { quick-tap-ms = <200>; };
 
 / {
+    macros {
+        // 開き → 閉じ → カーソル1つ左（間に入力できる）
+        paren_pair: paren_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>;
+        };
+
+        brkt_pair: brkt_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
+        };
+
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+        };
+
+        dquote_pair: dquote_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
+        };
+
+        squote_pair: squote_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp SQT &kp SQT &kp LEFT>;
+        };
+    };
+
     behaviors {
         mt2: mod_tap2 {
             compatible = "zmk,behavior-hold-tap";
@@ -132,9 +175,9 @@
         symbols {
             display-name = "symbols";
             bindings = <
-&kp QUESTION  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp BSPC  &kp TILDE                    &none      &kp UNDER  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PERCENT
-&kp AT        &kp SQT            &kp DOLLAR       &kp DEL   &kp FSLH                     &kp HASH   &none      &kp LBKT              &kp RBKT               &kp RIGHT_CONTROL
-&kp LSHFT     &kp GRAVE          &kp CARET        &kp PIPE  &kp BSLH                     &kp ASTRK  &kp AMPS   &kp LEFT_BRACE        &kp RIGHT_BRACE        &mo 4
+&kp QUESTION  &dquote_pair  &kp EXCLAMATION  &kp BSPC  &kp TILDE                    &none      &kp UNDER  &paren_pair  &kp RIGHT_PARENTHESIS  &kp PERCENT
+&kp AT        &squote_pair  &kp DOLLAR       &kp DEL   &kp FSLH                     &kp HASH   &none      &brkt_pair  &kp RBKT               &kp RIGHT_CONTROL
+&kp LSHFT     &kp GRAVE          &kp CARET        &kp PIPE  &kp BSLH                     &kp ASTRK  &kp AMPS   &brace_pair &kp RIGHT_BRACE        &mo 4
 &trans        &trans             &trans           &none     &trans     &trans    &trans  &trans     &trans     &trans                &trans                 &trans
                                  &trans           &trans    &trans                       &trans     &trans     &trans
             >;
