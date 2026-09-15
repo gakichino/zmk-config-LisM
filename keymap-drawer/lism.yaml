@@ -149,24 +149,24 @@ layers:
   - {t: ▽, type: trans}
   symbols:
   - QUESTION
-  - '&dquote_pair'
+  - DOUBLE QUOTE
   - '!'
   - {t: '$$mdi:backspace$$', type: backspace}
   - '~'
   - ''
   - _
+  - (
   - '&paren_pair'
-  - )
   - '%'
   - AT
-  - '&squote_pair'
+  - SQT
   - $
   - $$mdi:backspace-reverse-outline$$
   - FSLH
   - '#'
   - ''
+  - LBKT
   - '&brkt_pair'
-  - RBKT
   - $$mdi:apple-keyboard-control$$
   - $$mdi:apple-keyboard-shift$$
   - '`'
@@ -175,8 +175,8 @@ layers:
   - BSLH
   - ASTRK
   - AMPS
+  - '{'
   - '&brace_pair'
-  - '}'
   - functions
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
