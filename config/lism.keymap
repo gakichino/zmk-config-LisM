@@ -18,7 +18,7 @@
 
 / {
     macros {
-        // 開き → 閉じ → カーソル1つ左（間に入力できる）
+        // 閉じ → カーソル1つ左
         paren_pair: paren_pair {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -159,9 +159,9 @@
         symbols {
             display-name = "symbols";
             bindings = <
-&kp QUESTION  &kp DOUBLE_QUOTE  &kp EXCLAMATION  &kp BSPC  &kp TILDE                    &none      &kp UNDER  &kp LEFT_PARENTHESIS  &paren_pair  &kp PERCENT
-&kp AT        &kp SQT  &kp DOLLAR       &kp DEL   &kp FSLH                     &kp HASH   &none      &kp LBKT              &brkt_pair   &kp RIGHT_CONTROL
-&kp LSHFT     &kp GRAVE          &kp CARET        &kp PIPE  &kp BSLH                &kp ASTRK  &kp AMPS   &kp LEFT_BRACE        &brace_pair  &mo 4
+&kp QUESTION  &kp DOUBLE_QUOTES  &kp EXCLAMATION  &kp BSPC  &kp TILDE                    &none      &kp UNDER  &kp LEFT_PARENTHESIS  &paren_pair  &kp PERCENT
+&kp AT        &kp SQT            &kp DOLLAR       &kp DEL   &kp FSLH                     &kp HASH   &none      &kp LBKT              &brkt_pair   &kp RIGHT_CONTROL
+&kp LSHFT     &kp GRAVE          &kp CARET        &kp PIPE  &kp BSLH                     &kp ASTRK  &kp AMPS   &kp LEFT_BRACE        &brace_pair  &mo 4
 &trans        &trans             &trans           &none     &trans     &trans    &trans  &trans     &trans     &trans                &trans                 &trans
                                  &trans           &trans    &trans                       &trans     &trans     &trans
             >;
