@@ -149,7 +149,7 @@ layers:
   - {t: ▽, type: trans}
   symbols:
   - QUESTION
-  - DOUBLE QUOTE
+  - '"'
   - '!'
   - {t: '$$mdi:backspace$$', type: backspace}
   - '~'
