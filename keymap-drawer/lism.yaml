@@ -32,16 +32,16 @@ layers:
   - .
   - {t: /, h: numbers}
   - {t: LANGUAGE 1, h: '$$mdi:apple-keyboard-option$$'}
-  - Ctl+$$mdi:arrow-up-bold$$
-  - Ctl+$$mdi:arrow-up-bold$$
+  - ''
+  - ''
   - $$mdi:keyboard-esc$$
   - {t: '$$mdi:keyboard-space$$', h: symbols}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:backspace$$', h: RIGHT GUI}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-shift$$
-  - Ctl+$$mdi:arrow-down-bold$$
-  - Ctl+$$mdi:arrow-down-bold$$
+  - ''
+  - ''
   - {t: LANG2, h: '$$mdi:apple-keyboard-option$$'}
   - $$mdi:pan-left$$
   - $$mdi:pan-down$$
@@ -81,16 +81,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+$$mdi:keyboard-tab$$
-  - Gui+$$mdi:keyboard-tab$$
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:backspace$$', h: RIGHT GUI}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Ctl+Alt+$$mdi:keyboard-tab$$
-  - Ctl+Alt+$$mdi:keyboard-tab$$
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
