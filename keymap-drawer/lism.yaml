@@ -345,8 +345,8 @@ layers:
   - {t: ▽, type: trans}
   mouse:
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - numbers
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mouse_gesture'
