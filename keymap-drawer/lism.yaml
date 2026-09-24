@@ -355,9 +355,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-left-click-outline$$
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -408,3 +408,9 @@ combos:
 - p: [25, 26]
   k: $$mdi:keyboard-esc$$
   l: [mDefault, wDefault]
+- p: [3, 13]
+  k: $$mdi:mouse-left-click-outline$$
+- p: [2, 12]
+  k: $$mdi:mouse-right-click-outline$$
+- p: [1, 11]
+  k: $$mdi:mouse-scroll-wheel$$
