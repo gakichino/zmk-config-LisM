@@ -19,6 +19,29 @@
 / {
     macros {
         // 閉じ → カーソル1つ左
+        paren_pair: paren_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp RIGHT_PARENTHESIS &kp LEFT>;
+        };
+
+        brkt_pair: brkt_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp RBKT &kp LEFT>;
+        };
+
+        brace_pair: brace_pair {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap &kp RIGHT_BRACE &kp LEFT>;
+        };
     };
 
     behaviors {
